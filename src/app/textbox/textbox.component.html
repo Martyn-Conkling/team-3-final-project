@@ -1,0 +1,19 @@
+<style>
+    textarea{
+        outline-color: slategrey;
+    }
+</style>
+
+<form id="message-form">
+    <!-- textarea takes in a chat message and relays that to the sendMessage function
+            after sending it clears the textbox -->
+    <textarea
+    type="text" 
+    id="message-form" 
+    class="form-control" 
+    placeholder="Enter your message here!" 
+    #chat 
+    (keydown.enter) = "sendMessage(chat.value)"
+    (keyup.enter) = "chat.value = ''">
+</textarea>
+</form>
